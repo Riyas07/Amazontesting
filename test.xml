@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AmazonTest">
+    <test name="test case">
+        <classes>
+            <class name="org.webPages.Login_page"></class>
+            <class name="org.webPages.Search_page"></class>
+            <class name="org.webPages.Search_auto_omplete"></class>
+        </classes>
+    </test>
+</suite>
