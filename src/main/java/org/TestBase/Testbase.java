@@ -2,21 +2,22 @@ package org.TestBase;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.WebElements.Login_webelements;
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.webPages.Login_page;
 
 import java.time.Duration;
+import java.util.function.Function;
 
 public class Testbase {
 
@@ -49,6 +50,7 @@ public class Testbase {
                  .pollingEvery(Duration.ofSeconds(5))
                  .ignoring(NullPointerException.class);
         driver.navigate().to("https://www.amazon.in/");
+        WebDriverWait driverWait=new WebDriverWait(driver,Duration.ofSeconds(2));
 
     }
 
